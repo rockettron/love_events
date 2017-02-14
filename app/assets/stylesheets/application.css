@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.app {
+	background: fixed repeat-y url("background.jpg");
+}

@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20170214110318) do
 
   create_table "events", force: :cascade do |t|
@@ -24,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170214110318) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string   "path",        limit: 255
+    t.string   "photo",       limit: 255
     t.text     "description", limit: 65535
     t.integer  "event_id",    limit: 4
     t.datetime "created_at",                null: false

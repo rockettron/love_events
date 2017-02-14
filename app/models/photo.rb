@@ -1,9 +1,9 @@
 class Photo < ActiveRecord::Base
 	belongs_to :event
 
-	validates :path, presence: true
+	validates :photo, presence: true
 
-	mount_uploader :path, PhotoUploader
+	mount_uploader :photo, PhotoUploader
 	
 
 end

@@ -6,18 +6,9 @@ html
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
 		= csrf_meta_tags
 
-	body
+	body.app
 		= render "layouts/header"
 
 		.container
-			- flash.each do |key, value| 
-				.alert@alert *{class: "alert-#{key}"}
-					- if key == 'danger'
-						button.close type="button" data-dismiss="alert" aria-hidden="true" &times;
-						span.glyphicon.glyphicon-exclamation-sign aria-hidden="true"
-					= " " + value
 			= yield 
-			
-		.container
-			= debug(params) if Rails.env.development?
 			

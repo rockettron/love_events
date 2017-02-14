@@ -1,0 +1,21 @@
+.container.highlight
+	= form_for @event, html: { multiply: true, class: 'form-horizontal', role: 'form'} do |f| 
+		.form_group
+			= f.label :title, class: "col-sm-2 control-label"
+			.col-sm-10
+				= f.text_field :title, class: 'form-control', placeholder: 'I love you'
+
+		.form_group
+			= f.label :description, class: "col-sm-2 control-label"
+			.col-sm-10 = f.text_area :description, class: 'form-control', placeholder: 'I love you'
+
+		.form_group
+			= f.label :Date, class: "col-sm-2 control-label"
+			.col-sm-10 = f.date_field :datetime, start_year: 2017, class: 'form-control'
+
+		.form_group
+			= f.label :completed, class: "col-sm-2 control-label"
+			.col-sm-10 = f.check_box :completed, class: 'form-control'
+		
+		.form_group 
+			= f.submit :submit, class: 'col-sm-2 btn btn-default'

@@ -1,0 +1,7 @@
+- @photo.event = event
+= form_for @photo, html: { multipart: true } do |f|
+	p 
+		label My Photo
+		= image_tag(@photo) if @photo.photo.present? 
+		= f.file_field :photo
+		= f.hidden_field :photo_cache

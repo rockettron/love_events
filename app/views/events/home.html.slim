@@ -1,0 +1,21 @@
+.row
+	- @events_not.each do |event|
+		.jumbotron
+			p
+				h2 
+					= link_to event.title, event
+				h3 = event.description
+				h3 = event.datetime.to_s
+			- event.select_three_random_photos.each do |photo|
+				img.img-thumbnail src="#{photo.photo.medium.url}"
+	.col-md-12 
+		h1 Прошедшие события
+	- @events_yes.each do |event|
+		.jumbotron style='background: #e69595'
+			p
+				h2 
+					= link_to event.title, event
+				h3 = event.description
+				h3 = event.datetime.to_s
+			- event.select_three_random_photos.each do |photo|
+				img.img-thumbnail src="#{photo.photo.medium.url}"
