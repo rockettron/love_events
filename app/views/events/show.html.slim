@@ -4,7 +4,7 @@
 	h1 = @event.title
 	h3 = @event.description
 
-	= render 
+	= render 'add_photo.html.slim', event: @event
 
 	= carousel_for(@photos)
 

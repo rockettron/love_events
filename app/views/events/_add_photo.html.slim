@@ -1,7 +1,8 @@
-- @photo.event = event
-= form_for @photo, html: { multipart: true } do |f|
-	p 
-		label My Photo
-		= image_tag(@photo) if @photo.photo.present? 
-		= f.file_field :photo
-		= f.hidden_field :photo_cache
+.container style="dysplay: block; margin-right: 5px"
+	= form_for Photo.new, html: { multipart: true } do |f|
+		= f.hidden_field :event_id, value: event.id
+		p 
+			.form-group
+			= f.file_field :photo
+			= f.hidden_field :photo_cache
+			= f.submit "Add", class: "btn btn-success"

@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 
 	def home
 		@events_not = Event.where(completed: false)
-		@events_yes = Event.where(completed: true)			
+		@events_yes = Event.where(completed: true).order_desc		
 	end
 
 	def show

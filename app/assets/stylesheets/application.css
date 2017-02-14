@@ -15,5 +15,6 @@
  */
 
 .app {
-	background: fixed repeat-y url("background.jpg");
+	background: fixed repeat-y url("background.jpg") ;
+	background-size: cover;
 }
